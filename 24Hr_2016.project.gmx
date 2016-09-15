@@ -4,15 +4,36 @@
     <Config>Configs\Default</Config>
   </Configs>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\snd_placeholder</sound>
+  </sounds>
   <sprites name="sprites">
-    <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_util</sprite>
+    <sprite>sprites\spr_floor</sprite>
+    <sprite>sprites\spr_player_run</sprite>
+    <sprite>sprites\spr_player_slide</sprite>
+    <sprite>sprites\spr_player_jump</sprite>
   </sprites>
-  <backgrounds name="background"/>
+  <backgrounds name="background">
+    <background>background\bg_ground</background>
+    <background>background\bg_sky</background>
+    <background>background\bg_buildings</background>
+  </backgrounds>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\obj_controller</object>
+    <object>objects\obj_player</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\room0</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
+  <audiogroups name="audiogroups">
+    <audiogroup name="audiogroup_default"/>
+    <audiogroup name="run_audio"/>
+  </audiogroups>
   <TutorialState>
     <IsTutorial>0</IsTutorial>
     <TutorialName></TutorialName>
