@@ -28,6 +28,8 @@
             <string>// (0 = Menu, 1 = Running, 2 = End Score)
 global.runState = 0;
 global.runSpeed = 0;
+global.runDistance = 0;
+lastSpawn = 0;
 bgSound = noone;
 </string>
           </argument>
@@ -53,6 +55,8 @@ bgSound = noone;
             <kind>1</kind>
             <string>if(global.runState == 1)
 {
+    global.runDistance += global.runSpeed;
+    
     if(keyboard_check(vk_shift))
     {
         if(global.runSpeed &gt; 0)
@@ -72,6 +76,7 @@ bgSound = noone;
 } else
 {
     global.runSpeed = 0;
+    global.runDistance = 0;
     
     if(bgSound != noone)
     {
@@ -80,10 +85,42 @@ bgSound = noone;
     }
 }
 
-background_hspeed[0] = global.runSpeed;
-background_hspeed[1] = global.runSpeed * -4;
-background_hspeed[2] = global.runSpeed * -6;
+background_hspeed[0] = global.runSpeed * -1;
+background_hspeed[1] = global.runSpeed * -2;
+background_hspeed[2] = global.runSpeed * -4;
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// Obstacle spawn controller
+
+metres = floor(global.runDistance/64);
+
+if(global.runState == 1)
+{
+    if(metres != lastSpawn &amp;&amp; metres mod 3 == 0)
+    {
+        lastSpawn = metres;
+        instance_create(room_width, room_height - 32, obj_police);
+    }
+}
 </string>
           </argument>
         </arguments>
@@ -106,9 +143,12 @@ background_hspeed[2] = global.runSpeed * -6;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.runState = 1;
-global.runSpeed = 1;
-bgSound = audio_play_sound(snd_placeholder, 0, true);
+            <string>if(global.runState != 1)
+{
+    global.runState = 1;
+    global.runSpeed = 1;
+    bgSound = audio_play_sound(snd_placeholder, 0, true);
+}
 </string>
           </argument>
         </arguments>

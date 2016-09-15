@@ -9,10 +9,13 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_util</sprite>
-    <sprite>sprites\spr_floor</sprite>
     <sprite>sprites\spr_player_run</sprite>
+    <sprite>sprites\spr_player_run_ph</sprite>
     <sprite>sprites\spr_player_slide</sprite>
     <sprite>sprites\spr_player_jump</sprite>
+    <sprite>sprites\spr_police</sprite>
+    <sprite>sprites\spr_barricade</sprite>
+    <sprite>sprites\sprite9</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -23,6 +26,8 @@
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
+    <object>objects\obj_police</object>
+    <object>objects\obj_floor</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\room0</room>
