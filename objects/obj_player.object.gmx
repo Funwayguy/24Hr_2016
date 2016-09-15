@@ -125,6 +125,31 @@ if(keyboard_check(vk_shift))
         </arguments>
       </action>
     </event>
+    <event eventtype="4" ename="obj_floor">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>move_contact_solid(point_direction(x,y,hspeed,vspeed), 2);
+vspeed = 0;
+hspeed = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
     <event eventtype="4" ename="obj_barricade">
       <action>
         <libid>1</libid>
@@ -152,31 +177,6 @@ if(hitDir &gt; 180 || hitDir &lt; 45)
 }
 
 move_contact_solid(point_direction(x,y,hspeed,vspeed), 2);
-vspeed = 0;
-hspeed = 0;
-</string>
-          </argument>
-        </arguments>
-      </action>
-    </event>
-    <event eventtype="4" ename="obj_floor">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>move_contact_solid(point_direction(x,y,hspeed,vspeed), 2);
 vspeed = 0;
 hspeed = 0;
 </string>

@@ -9,13 +9,6 @@
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\spr_util</sprite>
-    <sprite>sprites\spr_player_run</sprite>
-    <sprite>sprites\spr_player_run_ph</sprite>
-    <sprite>sprites\spr_player_slide</sprite>
-    <sprite>sprites\spr_player_jump</sprite>
-    <sprite>sprites\spr_police</sprite>
-    <sprite>sprites\spr_barricade</sprite>
-    <sprite>sprites\sprite9</sprite>
     <sprite>sprites\spr_menu</sprite>
     <sprite>sprites\spr_placeholder</sprite>
     <sprite>sprites\spr_logo</sprite>
@@ -35,6 +28,7 @@
       <sprite>sprites\spr_build_03</sprite>
       <sprite>sprites\spr_build_04</sprite>
     </sprites>
+    <sprite>sprites\spr_Title</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -53,20 +47,16 @@
     <object>objects\menu_playButton</object>
     <object>objects\menu_QuitButton</object>
     <object>objects\obj_Score</object>
-  </objects>
-  <rooms name="rooms">
-    <room>rooms\rm_mainMenu</room>
-    <room>rooms\room0</room>
-    <room>rooms\rm_Credits</room>
-    <room>rooms\rm_game</room>
-    <room>rooms\rm_Options</room>
     <object>objects\obj_logo</object>
-    <object>objects\obj_parallax</object>
-    <object>objects\obj_building</object>
+    <object>objects\menu_Title</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>
+    <room>rooms\rm_Credits</room>
     <room>rooms\rm_main</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_Options</room>
+    <room>rooms\rm_mainMenu</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
