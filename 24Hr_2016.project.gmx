@@ -17,17 +17,36 @@
     <sprite>sprites\spr_barricade</sprite>
     <sprite>sprites\sprite9</sprite>
     <sprite>sprites\spr_menu</sprite>
+    <sprite>sprites\spr_placeholder</sprite>
+    <sprite>sprites\spr_logo</sprite>
+    <sprites name="characters">
+      <sprite>sprites\spr_player_run</sprite>
+      <sprite>sprites\spr_player_jump</sprite>
+      <sprite>sprites\spr_player_slide</sprite>
+      <sprite>sprites\spr_bar_tender</sprite>
+    </sprites>
+    <sprites name="obstacles">
+      <sprite>sprites\spr_police</sprite>
+      <sprite>sprites\spr_barricade</sprite>
+    </sprites>
+    <sprites name="buildings">
+      <sprite>sprites\spr_build_01</sprite>
+      <sprite>sprites\spr_build_02</sprite>
+      <sprite>sprites\spr_build_03</sprite>
+      <sprite>sprites\spr_build_04</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
-    <background>background\bg_sky</background>
     <background>background\bg_buildings</background>
+    <background>background\bg_blue_sky</background>
   </backgrounds>
   <paths name="paths"/>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
     <object>objects\obj_police</object>
+    <object>objects\obj_barricade</object>
     <object>objects\obj_floor</object>
     <object>objects\menu_CreditsButton</object>
     <object>objects\menu_optionsButton</object>
@@ -41,6 +60,13 @@
     <room>rooms\rm_Credits</room>
     <room>rooms\rm_game</room>
     <room>rooms\rm_Options</room>
+    <object>objects\obj_logo</object>
+    <object>objects\obj_parallax</object>
+    <object>objects\obj_building</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_intro</room>
+    <room>rooms\rm_main</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
