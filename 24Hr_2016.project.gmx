@@ -7,9 +7,23 @@
   <sounds name="sound"/>
   <sprites name="sprites">
     <sprite>sprites\spr_test</sprite>
+    <sprite>sprites\spr_menu</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
+  <objects name="objects">
+    <object>objects\menu_playButton</object>
+    <object>objects\menu_optionsButton</object>
+    <object>objects\menu_CreditsButton</object>
+    <object>objects\menu_QuitButton</object>
+    <object>objects\object4</object>
+  </objects>
+  <rooms name="rooms">
+    <room>rooms\rm_mainMenu</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_Options</room>
+    <room>rooms\rm_Credits</room>
+  </rooms>
   <help>
     <rtf>help.rtf</rtf>
   </help>
