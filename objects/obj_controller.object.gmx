@@ -118,7 +118,14 @@ if(global.runState == 1)
     if(metres != lastSpawn &amp;&amp; metres mod 3 == 0)
     {
         lastSpawn = metres;
-        instance_create(room_width, room_height - 32, obj_police);
+        
+        if(irandom(1))
+        {
+            instance_create(room_width, room_height - 16, obj_police);
+        } else
+        {
+            instance_create(room_width, room_height - 16, obj_barricade);
+        }
     }
 }
 </string>

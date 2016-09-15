@@ -31,9 +31,9 @@
     <yoffset>0</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="0" name="bg_sky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-1" vspeed="0" stretch="0"/>
-    <background visible="-1" foreground="0" name="bg_buildings" x="0" y="416" htiled="-1" vtiled="0" hspeed="-2" vspeed="0" stretch="0"/>
-    <background visible="-1" foreground="0" name="bg_ground" x="0" y="480" htiled="-1" vtiled="0" hspeed="-3" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_blue_sky" x="0" y="0" htiled="-1" vtiled="-1" hspeed="-1" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_buildings" x="0" y="0" htiled="-1" vtiled="0" hspeed="-2" vspeed="0" stretch="0"/>
+    <background visible="-1" foreground="0" name="bg_ground" x="0" y="444" htiled="-1" vtiled="0" hspeed="-3" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_controller" x="0" y="0" name="inst_D43BEBFD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_floor" x="0" y="480" name="inst_2D1DEBC2" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="obj_floor" x="0" y="496" name="inst_2D1DEBC2" locked="0" code="" scaleX="16" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_player" x="512" y="320" name="inst_D8E7C835" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
