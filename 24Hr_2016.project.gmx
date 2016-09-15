@@ -15,25 +15,34 @@
       <sprite>sprites\spr_player_run</sprite>
       <sprite>sprites\spr_player_jump</sprite>
       <sprite>sprites\spr_player_slide</sprite>
-      <sprite>sprites\spr_bar_tender</sprite>
+      <sprite>sprites\spr_bartender</sprite>
     </sprites>
     <sprites name="obstacles">
       <sprite>sprites\spr_police</sprite>
-      <sprite>sprites\spr_barricade</sprite>
+      <sprite>sprites\spr_barricade_fg</sprite>
+      <sprite>sprites\spr_barricage_bg</sprite>
     </sprites>
     <sprites name="buildings">
       <sprite>sprites\spr_build_01</sprite>
       <sprite>sprites\spr_build_02</sprite>
       <sprite>sprites\spr_build_03</sprite>
       <sprite>sprites\spr_build_04</sprite>
+      <sprite>sprites\spr_bar</sprite>
+      <sprite>sprites\sprite15</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
-    <background>background\bg_buildings</background>
+    <background>background\bg_distant_01</background>
+    <background>background\bg_distant_02</background>
     <background>background\bg_blue_sky</background>
+    <background>background\fg_telephone</background>
   </backgrounds>
   <paths name="paths"/>
+  <scripts name="scripts">
+    <script>scripts\getRandomBuilding.gml</script>
+    <script>scripts\endRun.gml</script>
+  </scripts>
   <objects name="objects">
     <object>objects\obj_controller</object>
     <object>objects\obj_player</object>
@@ -43,6 +52,10 @@
     <object>objects\obj_logo</object>
     <object>objects\obj_parallax</object>
     <object>objects\obj_building</object>
+    <object>objects\obj_bartender</object>
+    <object>objects\obj_barricade_bg</object>
+    <object>objects\obj_bar_front</object>
+    <object>objects\obj_bar_back</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_intro</room>

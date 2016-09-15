@@ -2,7 +2,7 @@
 <object>
   <spriteName>spr_util</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -48,7 +48,33 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>buildBuffer -= global.runSpeed * 3;
+buildBuffer = max(0, buildBuffer);
+
+
+if(buildBuffer &lt;= 0)
+{
+    var buildSprite = getRandomBuilding();
+    
+    if(buildSprite != noone)
+    {
+        var buildObj = instance_create(room_width,room_height - 64, obj_building);
+        
+        with(buildObj)
+        {
+            sprite_index = buildSprite;
+        }
+        
+        buildBuffer = sprite_get_width(buildSprite) + 16 + (16 * irandom(2));
+    }
+}
+
+background_hspeed[0] = 0;
+background_hspeed[1] = global.runSpeed * -1;
+background_hspeed[2] = global.runSpeed * -2;
+background_hspeed[3] = global.runSpeed * -4;
+background_hspeed[5] = global.runSpeed * -4;
+</string>
           </argument>
         </arguments>
       </action>

@@ -29,6 +29,9 @@
 global.runState = 0;
 global.runSpeed = 0;
 global.runDistance = 0;
+global.runDif = 0;
+
+difScale = 1000;
 lastSpawn = 0;
 bgSound = noone;
 </string>
@@ -56,6 +59,7 @@ bgSound = noone;
             <string>if(global.runState == 1)
 {
     global.runDistance += global.runSpeed;
+    global.runDif = global.runDistance/difScale;
     
     if(keyboard_check(vk_shift))
     {
@@ -77,6 +81,7 @@ bgSound = noone;
 {
     global.runSpeed = 0;
     global.runDistance = 0;
+    global.runDif = 0;
     
     if(bgSound != noone)
     {
@@ -84,10 +89,6 @@ bgSound = noone;
         bgSound = noone;
     }
 }
-
-background_hspeed[0] = global.runSpeed * -1;
-background_hspeed[1] = global.runSpeed * -2;
-background_hspeed[2] = global.runSpeed * -4;
 
 </string>
           </argument>
@@ -111,13 +112,14 @@ background_hspeed[2] = global.runSpeed * -4;
             <kind>1</kind>
             <string>// Obstacle spawn controller
 
-metres = floor(global.runDistance/64);
-
 if(global.runState == 1)
 {
-    if(metres != lastSpawn &amp;&amp; metres mod 3 == 0)
+    lastSpawn -= global.runSpeed;
+    lastSpawn = max(0, lastSpawn);
+    
+    if(lastSpawn &lt;= 0)
     {
-        lastSpawn = metres;
+        lastSpawn = max(80, 128 - global.runDif * 10);
         
         if(irandom(1))
         {
