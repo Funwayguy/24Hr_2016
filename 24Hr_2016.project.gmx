@@ -16,6 +16,7 @@
     <sprite>sprites\spr_police</sprite>
     <sprite>sprites\spr_barricade</sprite>
     <sprite>sprites\sprite9</sprite>
+    <sprite>sprites\spr_menu</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bg_ground</background>
@@ -28,9 +29,18 @@
     <object>objects\obj_player</object>
     <object>objects\obj_police</object>
     <object>objects\obj_floor</object>
+    <object>objects\menu_CreditsButton</object>
+    <object>objects\menu_optionsButton</object>
+    <object>objects\menu_playButton</object>
+    <object>objects\menu_QuitButton</object>
+    <object>objects\obj_Score</object>
   </objects>
   <rooms name="rooms">
+    <room>rooms\rm_mainMenu</room>
     <room>rooms\room0</room>
+    <room>rooms\rm_Credits</room>
+    <room>rooms\rm_game</room>
+    <room>rooms\rm_Options</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
